@@ -16,6 +16,9 @@ let foundText = "Loading...";
 function setup() {
     width2 = 400; height2 = 400;
     let canvas = createCanvas(width2, height2 + 50);
+	var x = (windowWidth - width) / 2;
+	var y = (windowHeight - height) / 2;
+	canvas.position(x, y);
     minToDraw = etatInitial;
     savedTime = millis();
     AstarImprovise(etatInitial, 0)
@@ -116,13 +119,13 @@ function drawTable(L) {
         text(L[i], x * width / 4 + width / 10, y * height2 / 4 + height2 / 10)
         strokeWeight(2);
         noFill();
-        rect( x * width / 4,y * height2 / 4.3,width / 4,height2 / 4.3);
+        rect( x * width / 4.05 +3,y * height2 / 4.3 + 3,width / 4.05,height2 / 4.3);
       }else{
         let y = int(i / largeur);
         let x = i % largeur;
         fill(color(0))
         strokeWeight(2);
-        rect( x * width / 4,y * height2 / 4.3,width / 4,height2 / 4.3);
+        rect( x * width / 4.05 +3,y * height2 / 4.3 + 3,width / 4.05,height2 / 4.3);
       }
     }
     let sizex = width * 2 / 3;
